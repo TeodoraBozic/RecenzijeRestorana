@@ -1,0 +1,96 @@
+/* Glavni kontejner za meni */
+.menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: lightgray; /* Tamno pozadinsko boja */
+  padding: 40px 0;
+}
+
+/* Naslov */
+.menu .menuTitle {
+  font-family: 'Cursive', sans-serif;
+  font-size: 40px;
+  width: 50px;
+  color: darkgray;
+  margin-bottom: 40px;
+  margin-top: 100px;
+}
+
+/* Lista restorana */
+.menu .restaurantsList {
+  width: 90vw;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px; /* Razmak između stavki */
+  place-items: center;
+  padding: 20px;
+}
+
+/* Styling za pojedinačne restoranske stavke */
+.menu .resItem {
+  background-color: #1e242b; /* Tamna pozadinska boja za item */
+  border-radius: 15px;
+  width: 100%;
+  height: 350px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu .resItem:hover {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px); /* Lagani efekat podizanja */
+  cursor: pointer;
+}
+
+/* Pozadina za slike restorana */
+.menu .resItem div {
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: darkgray;
+}
+
+/* Tekst unutar stavke */
+.menu .resItem h1,
+.menu .resItem p {
+  color: darkgray;
+  margin-left: 20px;
+  margin-top: 15px;
+  font-family: 'Arial', sans-serif;
+}
+
+.menu .resItem h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: lightgray;
+}
+
+.menu .resItem p {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: 400;
+  color: lightgray;
+}
+
+/* Prilagodbe za manji ekran (responsive design) */
+@media only screen and (max-width: 1300px) {
+  .menu .restaurantsList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .menu .restaurantsList {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,180 @@
+/* General styles */
+.kriticari {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+.kriticari h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Styling for all forms */
+.formaKontejner {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.formaKontejner:hover {
+    transform: scale(1.02);
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form h2 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 22px;
+}
+
+form input {
+    width: 80%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+form input:focus {
+    border-color: #6a11cb;
+    outline: none;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
+}
+
+form button {
+    background: linear-gradient(135deg, #4a4c8d, #3d28a4);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+form button:hover {
+    background: linear-gradient(135deg,  #4a4c8d, #3d28a4);
+    transform: scale(1.05);
+}
+
+/* Buttons below the form */
+.dugmadContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px;
+    
+}
+
+.dugmadContainer button {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dugmadContainer button:hover {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    transform: scale(1.05);
+}
+
+/* Critic list styling */
+.kriticari-list-container {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.kriticari-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.kriticari-card {
+    margin: 10px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.kriticari-card:hover {
+    transform: scale(1.02);
+}
+
+
+
+.kriticari-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.kriticari-specialization {
+    font-size: 16px;
+    color: #777;
+}
+
+.kriticari-description {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Toggle button */
+.toggle-button {
+    background: #f4f4f4;
+    color: #333;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle-button:hover {
+    background: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.dugmicizakriticare{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+
+}

@@ -1,0 +1,37 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* height: 70px; */
+  background-color: #121619;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+  z-index: 100;
+}
+
+  
+  .socialMedia svg {
+    color: white;
+    margin: 20px;
+    font-size: 70px;
+    cursor: pointer;
+  }
+  
+  .footer p {
+    color: white;
+  }
+
+  .socialmedias .MuiSvgIcon-root {
+    color: #d3d3d3; /* Svetlo siva boja */
+    width: 50px;
+    height: 50px;
+  }
+  
+  .footer span {
+    color: #d3d3d3;  /* Svetlo siva boja za tekst */
+  }
+  

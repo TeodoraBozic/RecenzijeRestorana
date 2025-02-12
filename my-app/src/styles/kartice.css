@@ -1,0 +1,77 @@
+.kartice html, .kartice body {
+  margin: 0;
+  padding: 0;
+  overflow: auto; /* Omogućava normalno skrolovanje */
+  display: flex;
+  flex-direction: row;
+}
+
+.listarestorana {
+  display: flex;
+  flex-wrap: wrap; /* Omogućava prelamanje u sledeći red kada je potrebno */
+  gap: 20px; /* Razmak između kartica */
+  justify-content: flex-start; /* Poravnanje na levo (možeš koristiti 'center' ili 'space-between' za drugo poravnanje) */
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Uklanja markere ili brojeve sa liste */
+}
+
+
+.restaurant-list-container {
+  font-family: Arial, sans-serif;
+  
+ 
+}
+
+.header {
+  position: sticky; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-button {
+  background-color: #bf7366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: #e5533d;
+}
+
+ul {
+  list-style: none;
+}
+
+.restaurant-card {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 250px; /* Širina kartice, možeš prilagoditi */
+  transition: transform 0.3s ease;
+}
+
+
+.restaurant-card:hover {
+  transform: scale(1.02);
+  background-color: #e8e8e8;
+}
+
+.restaurant-name {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.restaurant-location, .restaurant-cuisine, .restaurant-michelin, .restaurant-chef, .restaurant-hours, .restaurant-rating {
+  font-size: 1em;
+  margin: 3px 0;
+  color: #555;
+}

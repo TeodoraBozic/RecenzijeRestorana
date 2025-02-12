@@ -1,0 +1,84 @@
+.navbar {
+  width: 100vw;
+  /* height: 80px; */
+  background-color: #121619;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  /* margin-bottom: 20px; */
+}
+
+.navbar .leftSide {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .leftSide img {
+  width: 70px;
+}
+
+/* Sakrij logo kada je meni otvoren */
+.navbar .leftSide img {
+  display: block;
+}
+
+.navbar .rightSide {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Sakrij linkove na manjim ekranima */
+.navbar .rightSide .menuLinks {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Prikazivanje menija kada je openLinks true */
+.menuLinks.open {
+  display: flex;
+}
+
+/* Na manjim ekranima, kada je ekran manji od 600px, prikazivanje Reorder ikone */
+@media only screen and (max-width: 600px) {
+  .navbar .rightSide .menuLinks {
+    display: none; /* Sakrij meni */
+  }
+
+  .navbar .rightSide button {
+    display: block; /* Prikazivanje Reorder ikone */
+  }
+}
+
+/* Na ekranima većim od 600px */
+@media only screen and (min-width: 601px) {
+  .navbar .rightSide .menuLinks {
+    display: flex; /* Prikazivanje menija horizontalno */
+    flex-direction: row; /* Horizontalni raspored linkova */
+  }
+
+  .navbar .rightSide button {
+    display: none; /* Sakrij Reorder ikonu */
+  }
+
+  .navbar .rightSide a {
+    display: inline-block;
+    margin: 0 20px;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* Kada je meni otvoren, promeni boju linkova u belo */
+.menuLinks.open a.active {
+  color: white;
+}

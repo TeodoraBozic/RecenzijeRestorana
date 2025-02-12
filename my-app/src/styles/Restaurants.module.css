@@ -1,0 +1,245 @@
+body, html {
+  height: auto;
+  overflow: auto;
+
+}
+
+
+.restorani {
+  font-family: Arial, sans-serif;
+  width: 100vw; /* Postavite širinu na celu širinu ekrana */
+  margin-bottom: 50px;
+
+  margin-top: 50px;
+  padding: 20px;
+  background-color: lightgray;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+
+  
+}
+
+/* Naslov Restorana */
+.kontejnerNaslov {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.kontejnerNaslov h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Dugmici za restorane i jela */
+.dugmadRestoran, .dugmadInformacije,
+.dugmadJela {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #4a4c8d; /* Koristi istu boju kao za dugmadi u kritičarima */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #3d28a4; /* Tamnija nijansa za hover */
+  transform: scale(1.05);
+}
+
+/* Forma u Restorani komponenti */
+.kontejnerForma {
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+/* Stil forme */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+form input {
+  width: 80%;
+  max-width: 400px;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+form input:focus {
+  border-color: #6a11cb;
+  outline: none;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
+}
+
+/* Dugme za slanje forme */
+button[type="submit"] {
+  background-color: #28a745;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+
+.okvir-komponenta {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.naslov-komponenta {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.forma-kriticara {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.unos-kriticara {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 70%;
+}
+
+.dugme-pretraga {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dugme-pretraga:hover {
+  background-color: #0056b3;
+}
+
+.poruka-greske {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.lista-restorana {
+  list-style-type: none;
+  padding: 0;
+}
+
+.stavka-restoran {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ime-restorana {
+  font-weight: bold;
+  color: #333;
+}
+
+.ocena-restorana {
+  color: #555;
+}
+.unos-restorana {
+  margin-bottom: 20px;
+}
+
+.unos-input {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.dugme-pretraga {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dugme-pretraga:hover {
+  background-color: #45a049;
+}
+
+.komentari-lista {
+  margin-top: 20px;
+}
+
+.komentar {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
+
+.komentar-head {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.komentar-autor {
+  color: #333;
+}
+
+.komentar-text {
+  font-style: italic;
+  color: #555;
+}
+
+.poruka-greske {
+  color: red;
+}
+
+.nema-komentara {
+  color: gray;
+  font-style: italic;
+}

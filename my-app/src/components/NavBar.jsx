@@ -1,38 +1,60 @@
-import React, { useState } from 'react';
-import LogoReact from '../assets/react.svg';
-import { Link } from 'react-router-dom';
-import '../styles/navbar.css';
-import ReorderIcon from '@mui/icons-material/Reorder';
+import React from "react";
+import { Link } from "react-router-dom";
 
-function NavBar() {
-  const [openLinks, setOpenLinks] = useState(false); // Stanje za otvaranje/sakrivanje menija
-
-  const toggleNavBar = () => {
-    setOpenLinks(!openLinks); // Prebacivanje stanja
-  };
-
+export default function NavBar() {
   return (
-    <div className="navbar">
-      <div className="leftSide">
-        {/* Prikazivanje loga samo kada meni nije otvoren */}
-        {!openLinks && <img src={LogoReact} alt="React Logo" />}
-      </div>
-      {/* Korišćenje klase za menadžment prikaza menija */}
-      <div className={`rightSide ${openLinks ? 'open' : ''}`}>
-        <button onClick={toggleNavBar} className="reorderButton">
-          <ReorderIcon />
-        </button>
-        {/* Meni koji se prikazuje kada je openLinks true */}
-        <div className={`menuLinks ${openLinks ? 'open' : ''}`}>
-          <Link to="/" className={openLinks ? 'active' : ''}>Home</Link>
-          <Link to="/menu" className={openLinks ? 'active' : ''}>Menu</Link>
-          <Link to="/Restaurants" className={openLinks ? 'active' : ''}>Restorani</Link>
-          <Link to="/Critics" className={openLinks ? 'active' : ''}>Kriticari</Link>
-          <Link to="/Users" className={openLinks ? 'active' : ''}>Korisnici</Link>
+    <header className="navbar">
+      <div className="nav-inner">
+        <div className="nav-logo">
+          <Link to="/">🍴 GastroGuide</Link>
         </div>
+        <nav className="nav-links">
+          <Link to="/restaurants">Restorani</Link>
+          <Link to="/critics">Kritičari</Link>
+          <Link to="/users">Korisnici</Link>
+          <Link to="/menu">Meni</Link>
+        </nav>
       </div>
-    </div>
+
+      <style>{`
+        .navbar {
+          position: sticky;
+          top: 0;
+          z-index: 50;
+          background: linear-gradient(135deg, #a3b18a, #d6a57c);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+          padding: 10px 20px;
+        }
+        .nav-inner {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        .nav-logo a {
+          font-size: 20px;
+          font-weight: bold;
+          color: #2d2a26;
+          text-decoration: none;
+        }
+        .nav-links {
+          display: flex;
+          gap: 18px;
+        }
+        .nav-links a {
+          text-decoration: none;
+          font-weight: 500;
+          color: #2d2a26;
+          padding: 6px 10px;
+          border-radius: 8px;
+          transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover {
+          background: rgba(255,255,255,0.35);
+          color: #000;
+        }
+      `}</style>
+    </header>
   );
 }
-
-export default NavBar;

@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Register Neo4j Driver as a Singleton
 builder.Services.AddSingleton<IDriver>(sp =>
 {
-    return GraphDatabase.Driver("bolt://localhost:7687", AuthTokens.Basic("neo4j", "janateodora"));
+    return GraphDatabase.Driver("bolt://localhost:7690", AuthTokens.Basic("neo4j", "janateodora"));
 });
 
 // Add CORS services with a policy

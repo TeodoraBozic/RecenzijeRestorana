@@ -1,15 +1,25 @@
-import React from 'react';
-import InstagramIcon from "@mui/icons-material/Instagram"; // Uvezi ispravno ikonu
-import "../styles/footer.css"
-function Footer() {
+import React from "react";
+
+export default function Footer() {
   return (
-    <div className="footer">
-        <div className="socialmedias"> 
-            <InstagramIcon />  {/* Koristi ispravno ime komponente */}
-        </div> 
-        <span>&copy; Pronadjite nas na instagramu:</span>  {/* Ispravno prikazivanje copyright simbola */}
-    </div>
+    <footer className="footer">
+      <p>© {new Date().getFullYear()} GastroGuide • Teodora & Jana</p>
+
+      <style>{`
+        .footer {
+          background: #eae6df;
+          color: #2d2a26;
+          text-align: center;
+          padding: 12px 16px;
+          font-size: 14px;
+          border-top: 1px solid rgba(0,0,0,0.1);
+          margin-top: auto;
+        }
+        .footer p {
+          margin: 0;
+          opacity: 0.85;
+        }
+      `}</style>
+    </footer>
   );
 }
-
-export default Footer;
